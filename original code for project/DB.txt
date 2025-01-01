@@ -1,0 +1,29 @@
+create database EvilChatbot;
+use EvilChatbot;
+
+create table register(username varchar(50) primary key,
+password varchar(50),
+contact varchar(12),
+email varchar(50),
+address varchar(80));
+
+create table account(acc_no varchar(20),
+transaction_type varchar(30),
+transaction_amount varchar(30),
+balance varchar(30),
+transaction_date varchar(30));
+
+insert into account values('1234', 'deposit', '10000', '10000', '2023-10-25');
+insert into account values('1234', 'deposit', '2000', '12000', '2023-10-26');
+insert into account values('1234', 'deposit', '3000', '15000', '2023-10-27');
+insert into account values('1234', 'debit', '1000', '14000', '2023-10-28');
+insert into account values('1234', 'debit', '2000', '12000', '2023-10-28');
+
+insert into account values('4567', 'deposit', '20000', '20000', '2023-10-22');
+insert into account values('4567', 'deposit', '12000', '32000', '2023-10-23');
+insert into account values('4567', 'debit', '3000', '29000', '2023-10-26');
+insert into account values('4567', 'debit', '2000', '27000', '2023-10-28');
+insert into account values('4567', 'debit', '1000', '26000', '2023-10-28');
+
+commit;
+
